@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUM OF DIGITS</title>
+  </head>
+  <body>
+    <h1>Sum of Digits</h1>
+
+    <input type="text" id="input" placeholder="enter a number" />
+    <button onclick="sumd()">click me</button>
+
+    <div id="result"></div>
+
+    <script>
+      function sumd() {
+        let input = document.getElementById("input").value;
+
+        let sum = 0;
+        let x = input.toString();
+
+        for (let i = 0; i < x.length; i++) {
+          sum += parseInt(x[i]);
+        }
+
+        document.getElementById("result").textContent = `${sum}`;
+      }
+    </script>
+  </body>
+</html>

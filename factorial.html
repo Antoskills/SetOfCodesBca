@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>factorial</title>
+  </head>
+  <body>
+    <h1>factorial</h1>
+
+    <input type="text" id="input" placeholder="enter a number" />
+    <button onclick="facto()">click me</button>
+
+    <div id="result"></div>
+
+    <script>
+      function facto() {
+        let input = document.getElementById("input").value;
+        let n = input
+
+        let fact = 1;
+
+        while(n >= 1){
+            fact *= n;
+            n--;
+        }
+
+        document.getElementById("result").textContent = `${fact}`;
+      }
+    </script>
+  </body>
+</html>
