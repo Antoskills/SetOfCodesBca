@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidation</title>
+</head>
+<body>
+    <form name="myForm" onsubmit="validation()">
+        Name:<input type="text" name="name" placeholder="enter your name">
+        <input type="submit" >
+    </form>
+
+    <script>
+        function validation(){
+            let x = document.forms['myForm']['name'].value;
+            if (x === ""){
+                alert("please enter the name YOU nigga")
+                return false
+            }
+            else{
+                alert("sotta sotta motta")
+                return true
+            }
+        }
+    </script>
+    
+</body>
+</html>
