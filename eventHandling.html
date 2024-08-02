@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #hover{
-            width: 200px;
-            height: 200px;
-            color: black;
-            background-color: aqua;
-            padding: auto;
-            margin: auto;
-            text-align: center;
-        }
+      #hover {
+        width: 200px;
+        height: 200px;
+        color: black;
+        background-color: aqua;
+        padding: auto;
+        margin: auto;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
-    <button id="buttonClicked"> click me!</button>
+  </head>
+  <body>
+    <button id="buttonClicked">click me!</button>
+
+    <button id="doubleClick">Double click me!</button>
 
     <div id="hover"></div>
 
-    <input type="text" placeholder="enter key press chey aliya" id="enter">
+    <input type="text" placeholder="enter key press chey aliya" id="enter" />
     <div class="result"></div>
 
-    <hr>
+    <hr />
     <form id="myForm">
-    <input type="text" id="formInput" placeholder="Submit this form">
-    <button type="submit">Submit</button>
+      <input type="text" id="formInput" placeholder="Submit this form" />
+      <button type="submit">Submit</button>
     </form>
 
     <script>
-        document.getElementById("buttonClicked").addEventListener('click',function(){
-        alert("button clicked!")
+      document
+        .getElementById("buttonClicked")
+        .addEventListener("click", function () {
+          alert("button clicked!");
         });
 
-        document.getElementById("hover").addEventListener('mouseover',function(){
-            this.style.backgroundColor = 'lightgreen';
-            this.textContent = 'hello bratha'
+      document
+        .getElementById("hover")
+        .addEventListener("mouseover", function () {
+          this.style.backgroundColor = "lightgreen";
+          this.textContent = "hello bratha";
         });
 
-        document.getElementById("hover").addEventListener('mouseout',function(){
-            this.style.backgroundColor = 'lightblue';
-            this.textContent = 'hello sis'
-
+      document
+        .getElementById("hover")
+        .addEventListener("mouseout", function () {
+          this.style.backgroundColor = "lightblue";
+          this.textContent = "hello sis";
         });
 
-        document.getElementById("enter").addEventListener('keydown',function(event){
-        if (event.key == 'Enter'){
-            document.querySelector(".result").textContent = `enter is clicked`
-        }
+      document
+        .getElementById("enter")
+        .addEventListener("keydown", function (event) {
+          if (event.key == "Enter") {
+            document.querySelector(".result").textContent = `enter is clicked`;
+          }
         });
 
-        //form submit
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-        alert('Form submitted with value: ');
-    });
-
+      //form submit
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          alert("Form submitted with value: ");
+        });
+          document
+            .getElementById("doubleClick")
+            .addEventListener("dblclick", function (event) {
+              console.log("entered");
+              alert("clicked twice!");
+            });
     </script>
-</body>
+  </body>
 </html>
